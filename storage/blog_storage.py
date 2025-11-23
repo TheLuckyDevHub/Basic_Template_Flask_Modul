@@ -10,7 +10,7 @@ BLOG_POSTS_DATA_PATH = os.path.join(os.path.dirname(__file__), 'data.json')
 DEFAULT_BLOG_DATA = [
     {
         "id": 1,
-        "author": "John Doe",
+        "author": "Max Mustermann",
         "title": "Default Post",
         "content": "This is a post from default data."
     },
@@ -94,3 +94,37 @@ def save_blog_posts(posts: list[dict[str, str]]) -> None:
         print(f'{RED}Data file {BLOG_POSTS_DATA_PATH} could not be saved general error:{RESET} {e}')
     global blog_posts_cached
     blog_posts_cached = None
+
+
+def _get_next_id(posts: list[dict[str, str]]) -> int:
+    """
+    Returns the next available ID for a new blog post.
+
+    The function takes a list of existing blog posts
+    and calculates the next ID by finding the maximum
+    existing ID and adding 1 to it.
+    """
+    if not posts:
+        return 1
+    max_id = max(post["id"] for post in posts)
+    return max_id + 1
+
+
+def add_blog_post(author: str, title: str, content: str) -> None:
+    """
+    Adds a new blog post to the JSON file.
+
+    The function takes the author, title, and content
+    of the blog post as parameters and appends it to
+    the existing blog posts in the JSON file.
+    """
+    posts = get_blog_posts()
+    new_post = {
+        "id": _get_next_id(posts),
+        "author": author,
+        "title": title,
+        "content": content
+    }
+
+    posts.append(new_post)
+    save_blog_posts(posts)
