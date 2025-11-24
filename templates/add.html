@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add blog post</title>
+    <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,25 +11,24 @@
 </head>
 <body>
     <div class="post-form-container">
-        <h1>✨ Create New Post</h1>
-        <form action="/add" method="post">
-        
+        <h1>✨ {{header_post_container }}</h1>
+        <form action="/{{ action }}" method="post">
             <div>
                 <label for="author">Author:</label>
-                <input type="text" id="author" name="author" placeholder="Enter your name" value="Author" required>
+                <input type="text" id="author" name="author" placeholder="Enter your name" value="{{post_author}}" required>
             </div>
 
             <div>
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" placeholder="Enter a descriptive title" value="Title" required>
+                <input type="text" id="title" name="title" placeholder="Enter a descriptive title" value="{{post_title}}" required>
             </div>
 
             <div>
                 <label for="content">Content:</label>
-                <textarea rows="10" id="content" name="content" placeholder="Write your post here..." required>Content</textarea>
+                <textarea rows="10" id="content" name="content" placeholder="Write your post here..." required>{{post_content}}</textarea>
             </div>
 
-            <button type="submit">Publish Post</button>
+            <button type="submit">{{ button_text }}</button>
         </form>
     </div>
 </body>

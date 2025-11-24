@@ -8,8 +8,10 @@
 /* General Styles for the Page */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1e1e1e; /* Dark background */
-    color: #f0f0f0; /* Light text */
+    background-color: #1e1e1e;
+    /* Dark background */
+    color: #f0f0f0;
+    /* Light text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,13 +22,16 @@ body {
 
 /* Form Container (Dark Card) */
 .post-form-container {
-    background-color: #252526; /* Darker card background */
+    background-color: #252526;
+    /* Darker card background */
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    /* Strong shadow for depth */
     width: 100%;
     max-width: 500px;
-    border: 1px solid #333; /* Subtle border */
+    border: 1px solid #333;
+    /* Subtle border */
 }
 
 /* Heading */
@@ -46,7 +51,8 @@ form div {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #e08181ff; /* Slightly lighter grey */
+    color: #e08181ff;
+    /* Slightly lighter grey */
     font-weight: 600;
     font-size: 0.95rem;
 }
@@ -56,9 +62,12 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #3a3a3a; /* Dark border */
-    background-color: #333333; /* Dark input fields */
-    color: #f0f0f0; /* Light text inside the field */
+    border: 1px solid #3a3a3a;
+    /* Dark border */
+    background-color: #333333;
+    /* Dark input fields */
+    color: #f0f0f0;
+    /* Light text inside the field */
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 1rem;
@@ -68,7 +77,8 @@ textarea {
 /* Focus Effect (Turquoise) */
 input[type="text"]:focus,
 textarea:focus {
-    border-color: #00bcd4; /* Cyan/Turquoise accent color */
+    border-color: #00bcd4;
+    /* Cyan/Turquoise accent color */
     box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.4);
     outline: none;
 }
@@ -84,8 +94,10 @@ button[type="submit"] {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #00bcd4; /* Turquoise accent color */
-    color: #1e1e1e; /* Dark text on light button */
+    background-color: #00bcd4;
+    /* Turquoise accent color */
+    color: #1e1e1e;
+    /* Dark text on light button */
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -96,10 +108,10 @@ button[type="submit"] {
 
 /* Hover and Active effect for the button */
 button[type="submit"]:hover {
-    background-color: #0097a7; /* Darker turquoise on hover */
+    background-color: #0097a7;
+    /* Darker turquoise on hover */
 }
 
 button[type="submit"]:active {
     transform: scale(0.99);
 }
-
